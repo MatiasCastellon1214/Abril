@@ -1,0 +1,326 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container .uno .img5, .img6, .img7{
+    display: none;
+}
+
+
+.sugerencias{
+    display: none;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header header"
+    ". uno uno uno ."
+    ". dos dos dos ."
+    "footer footer footer footer footer";
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    padding: 15px 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 100%;
+}
+
+header h1{
+    font-size: 1.9rem;
+}
+
+header .perfil{
+    align-self: center;
+    justify-self: end;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.search{
+    display: none;
+}
+.uno{
+    margin: 20px 10px 0px 10px;
+    padding: 15px 5px;
+    border: 0.4px solid rgba(34, 34, 34, 0.5);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: uno;
+}
+.uno img{
+    align-self: center;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    width: 60%;
+}
+.dos{
+    border: 0.4px solid rgba(34, 34, 34, 0.5);
+    border-radius: 5px;
+    margin: 20px 10px 30px 10px;
+    display: grid;
+    grid-area: dos;
+}
+.dos .name{
+    padding: 10px 0px;
+    border-bottom: 0.4px solid rgba(34, 34, 34, 0.5);
+    /*border-radius: 5px 5px 0px 0px;*/
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.dos .name .perfil2{
+    border-radius: 50%;
+    width: 100%;
+}
+.dos .name .imgabril{
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+}
+.dos .name .imgabril .abril{
+    padding-left: 5px;
+    color: #262626;
+    font-size: 1.1rem;
+    width: 100%;
+}
+.dos .name .more{
+    margin-right: 10px;
+    justify-self: flex-end;
+
+}
+.dos .principal{
+    align-self: center;
+    justify-self: center;
+    height: 95%;
+    width: 95%;
+}
+.dos .redes{
+    padding-left: 5px;
+}
+.dos .parrafs{
+    margin-top: 10px;
+}
+.dos .parraf1{
+    padding-left: 10px;
+    color: #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .85rem;
+    line-height: 12px;
+}
+.dos .parraf2{
+    padding-left: 10px;
+    color: #A49B9B;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .85rem;
+    line-height: 12px;
+}
+.dos .parraf3{
+    padding-left: 10px;
+    color: #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .85rem;
+    line-height: 12px;
+}
+.dos .parraf4{
+    padding-left: 10px;
+    color: #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .85rem;
+    line-height: 12px;
+}
+.footer{
+    padding: 5px 0px;
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    justify-items: center;
+    background-color: #222222;
+    grid-area: footer;
+}
+.footer p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: .85rem;
+    color: #FFFFFF;
+}
+.footer .redes a i{
+    color: #FFFFFF;
+}
+@media (min-width: 412px){
+    .container{
+        gap: 35px;
+        grid-template-areas: 
+        "header header header header header header header header header header header header"
+        ". uno uno uno uno uno . . sug sug sug ."
+        ". dos dos dos dos dos . . sug sug sug ."
+        ". dos dos dos dos dos . . . . . . "
+        "footer footer footer footer footer footer footer footer footer footer footer footer";       
+        margin: auto;
+    }
+    .header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: center;
+    }
+    .header .insta{
+        grid-column: 2/3;
+    }
+    .header .search{
+        height: 35px;
+        display: block;
+        grid-column: 4/9;
+    }
+
+    .header .perfil{
+        width: 50%;
+        grid-column: 12/13;
+        justify-self: start;
+    }
+    .container .uno .img5, .img6, .img7{
+        display: block;
+    }
+    .container .uno{
+        width: 85%;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .container .sugerencias{
+        margin-top: 40px;
+        width: 85%;
+        padding: 15px 0px;
+        display: grid;
+        grid-area: sug;
+        display: block;
+        justify-content: center;
+        justify-items: center;
+    }
+    .sugerencias header{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    }
+    .sugerencias header img{
+        justify-self: center;
+        border-radius: 50%;
+        width: 80%;
+    }
+    .sugerencias header .nombre{
+        justify-self: start;
+        align-self: center;
+        grid-column: 2/4;
+    }
+    .sugerencias header .nombreuno{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: .85rem;
+        line-height: 12px;
+        color: #000000;
+    }
+    .sugerencias header .nombredos{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .85rem;
+        line-height: 12px;
+        color: #808080;
+    }
+    .nombredos::after{
+        content: "👻";
+    }
+    .sugerencias header .cambiar{
+        align-self: center;
+        grid-column: 4/5;    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 15px;
+    }
+    .sugerencias header a{
+        color: #1CA0F6;
+        align-items: center;
+        text-decoration: none;
+    }
+    .sugerencias .h2{
+        margin-top: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: .9rem;
+        line-height: 12px;
+        color: #808080;
+    }
+    .sugerencias .sug{
+        margin-top: 15px;
+    }    
+    .sugerencias .sug .suguno, .sugdos{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    }     
+    .sugerencias .sug .jona, .gabi{
+        justify-self: start;
+        align-self: center;
+        grid-column: 2/4;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 80%;
+        line-height: 12px;
+        color: #000000;
+    }
+    .sugerencias .sug .suguno{
+        display: grid;
+    }
+    .sugerencias .sug .seguir{
+        align-self: center;
+        grid-column: 4/5;    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 15px;
+    }
+    .sugerencias .sug .seguir a{
+        color: #1CA0F6;
+        align-items: center;
+        text-decoration: none;
+    }
+    .sugerencias .sug img{
+        justify-self: start;
+        border-radius: 50%;
+        width: 75%;
+    }
+    .sugerencias .sug .sugdos{
+        margin-top: 10px;
+        display: grid;
+    } 
+    .sugerencias .sug .sugdos img{
+        border-radius: 50%;
+        width: 75%;
+    }
+    .dos{
+        width: 85%;
+    }
+}
